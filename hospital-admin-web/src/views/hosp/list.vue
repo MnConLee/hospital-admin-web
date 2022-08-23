@@ -49,7 +49,7 @@
         <template slot-scope="scope">
                 {{ (page - 1) * limit + scope.$index + 1 }}
         </template>
-    </el-table-column>
+    </el-table-column>
 
     <el-table-column label="医院logo">
         <template slot-scope="scope">
