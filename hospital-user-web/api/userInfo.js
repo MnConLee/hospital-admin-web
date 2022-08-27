@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 const api_name = `/api/user`
 
-//用户登录
+//手机登录
 export default {
   login(userInfo) {
     return request({
@@ -11,19 +11,19 @@ export default {
       data: userInfo
     })
   },
-
+  //根据userid获取用户信息
   getUserInfo() {
     return request({
       url: `${api_name}/auth/getUserInfo`,
       method: `get`
     })
   },
-
-  saveUserAuah(userAuah) {
+  //用户认证
+  saveUserAuth(userAuth) {
     return request({
-      url: `${api_name}/auth/userAuah`,
+      url: `${api_name}/auth/userAuth`,
       method: 'post',
-      data: userAuah
+      data: userAuth
     })
   }
 }
