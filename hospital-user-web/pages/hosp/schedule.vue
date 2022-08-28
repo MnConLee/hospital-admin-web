@@ -36,8 +36,8 @@
             <!-- item.depNumber == -1 ? 'gray space' : item.depNumber == 0 ? 'gray' : 'small small-space'-->
             <!-- selected , index == activeIndex ? 'selected' : ''-->
             <div :class="'calendar-item '+item.curClass" style="width: 124px;"
-                 v-for="(item, index) in bookingScheduleList" :key="item.id"
-                 @click="selectDate(item, index)">
+                  v-for="(item, index) in bookingScheduleList" :key="item.id"
+                  @click="selectDate(item, index)">
               <div class="date-wrapper"><span>{{ item.workDate }}</span><span class="week">{{ item.dayOfWeek }}</span></div>
               <div class="status-wrapper" v-if="item.status == 0">{{ item.availableNumber == -1 ? '无号' : item.availableNumber == 0 ? '约满' : '有号' }}</div>
               <div class="status-wrapper" v-if="item.status == 1">即将放号</div>
@@ -46,12 +46,12 @@
           </div>
           <!-- 分页 -->
           <el-pagination
-             class="pagination"
-             layout="prev, pager, next"
-             :current-page="page"
-             :total="total"
-             :page-size="limit"
-             @current-change="getPage">
+              class="pagination"
+              layout="prev, pager, next"
+              :current-page="page"
+              :total="total"
+              :page-size="limit"
+              @current-change="getPage">
           </el-pagination>
         </div>
         <!-- 即将放号 #start-->
