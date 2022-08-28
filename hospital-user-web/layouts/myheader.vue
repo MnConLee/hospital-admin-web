@@ -174,7 +174,7 @@ export default {
   methods: {
     loginCallback(name, token, openid) {
       // 打开手机登录层，绑定手机号，改逻辑与手机登录一致
-      if(openid != '') {
+      if(openid != null) {
         this.userInfo.openid = openid
         this.showLogin()
       } else {
