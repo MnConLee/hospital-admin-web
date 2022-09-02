@@ -40,7 +40,7 @@
 
         </div>
  <!-- 登录弹出层 -->
-    <el-dialog v-if="dialogUserFormVisible" :visible.sync="dialogUserFormVisible" style="text-align: left;" top="50px" :append-to-body="true"  width="960px" @close="closeDialog()">
+    <el-dialog v-if="dialogUserFormVisible" :visible.sync="dialogUserFormVisible" style="text-align: left;"  top="50px" :append-to-body="true"  width="960px" @close="closeDialog()">
       <div class="container">
 
         <!-- 手机登录 #start -->

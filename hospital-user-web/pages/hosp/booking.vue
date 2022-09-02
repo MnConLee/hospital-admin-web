@@ -35,7 +35,7 @@
               <div >
                 <div class="v-card clickable item ">
                   <div class="inline" v-for="(item,index) in patientList" :key="item.id"
-                       @click="selectPatient(index)" style="margin-right: 10px;">
+                      @click="selectPatient(index)" style="margin-right: 10px;">
                     <!-- 选中 selected  未选中去掉selected-->
                     <div :class="activeIndex == index ? 'item-wrapper selected' : 'item-wrapper'">
                       <div>
@@ -82,6 +82,7 @@
                 <div class="text bind-card"></div>
               </div>
             </el-card>
+
 
             <div class="sub-title">
               <div class="block"></div>
@@ -150,6 +151,7 @@ import '~/assets/css/hospital.css'
 
 import hospitalApi from '@/api/hosp'
 import patientApi from '@/api/patient'
+import orderInfoApi from '@/api/orderInfo'
 
 export default {
 
@@ -201,7 +203,23 @@ export default {
     },
 
     submitOrder() {
+      if(this.patient.id == null) {
+        this.$message.error('请选择就诊人')
+        return
+      }
+      // 防止重复提交
+      if(this.submitBnt == '正在提交...') {
+        this.$message.error('重复提交')
+        return
+      }
 
+      this.submitBnt = '正在提交...'
+      orderInfoApi.saveOrders(this.scheduleId, this.patient.id).then(response => {
+        let orderId = response.data
+        window.location.href = '/order/show?orderId=' + orderId
+      }).catch(e => {
+        this.submitBnt = '确认挂号'
+      })
     },
 
     addPatient() {

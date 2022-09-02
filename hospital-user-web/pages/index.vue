@@ -34,8 +34,8 @@
         <div class="condition-wrapper">
           <span class="item v-link clickable"
             :class="hostypeActiveIndex == index ? 'selected' : ''"
-             v-for="(item,index) in hostypeList" :key="item.id"
-             @click="hostypeSelect(item.value, index)">{{ item.name }}</span>
+            v-for="(item,index) in hostypeList" :key="item.id"
+            @click="hostypeSelect(item.value, index)">{{ item.name }}</span>
        </div>
       </div>
     <div class="filter-wrapper">
@@ -66,8 +66,8 @@
           </div>
           </div>
           <img :src="'data:image/jpeg;base64,'+item.logoData"
-           :alt="item.hosname"
-           class="hospital-img">
+          :alt="item.hosname"
+          class="hospital-img">
       </div>
     </div>
     </div>
