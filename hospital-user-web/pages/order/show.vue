@@ -145,20 +145,24 @@ export default {
       weixinApi.createNative(this.orderId).then(response => {
         this.payObj = response.data
         if(this.payObj.codeUrl == '') {
+          //生成失败
           this.dialogPayVisible = false
           this.$message.error("支付错误")
         } else {
+          //每隔三秒调用查询支付状态接口
           this.timer = setInterval(() => {
             this.queryPayStatus(this.orderId)
           }, 3000);
         }
       })
     },
+    //查询支付状态
     queryPayStatus(orderId) {
       weixinApi.queryPayStatus(orderId).then(response => {
         if (response.message == '支付中') {
-          return
+          return;
         }
+        //清楚定时器
         clearInterval(this.timer);
         window.location.reload()
       })
