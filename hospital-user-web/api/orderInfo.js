@@ -30,7 +30,15 @@ export default {
         url: `${api_name}/auth/getStatusList`,
         method: 'get'
       })
-    }
+    },
+    //取消订单
+    cancelOrder(orderId) {
+      return request({
+          url: `${api_name}/auth/cancelOrder/${orderId}`,
+          method: 'get'
+      })
+  },
+
 
 
 }
