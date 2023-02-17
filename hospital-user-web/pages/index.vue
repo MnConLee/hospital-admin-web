@@ -36,7 +36,7 @@
             :class="hostypeActiveIndex == index ? 'selected' : ''"
             v-for="(item,index) in hostypeList" :key="item.id"
             @click="hostypeSelect(item.value, index)">{{ item.name }}</span>
-       </div>
+      </div>
       </div>
     <div class="filter-wrapper">
       <span

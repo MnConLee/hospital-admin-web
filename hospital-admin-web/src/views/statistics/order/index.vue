@@ -39,7 +39,6 @@ import echarts from 'echarts'
 import statisticsApi from '@/api/sta'
 
 export default {
-
     data() {
         return {
             searchObj: {

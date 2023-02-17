@@ -13,6 +13,10 @@
                 <span class="v-link selected dark" onclick="javascript:window.location='/patient'"> 就诊人管理 </span>
                 </div>
                 <div class="nav-item ">
+                 <span class="v-link clickable dark" onclick="javascript:window.location='/bingli'"> 病例记录 </span>
+                 </div>
+
+                <div class="nav-item ">
                 <span class="v-link clickable dark"> 修改账号信息 </span>
                 </div>
                 <div class="nav-item ">

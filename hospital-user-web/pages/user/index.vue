@@ -9,17 +9,25 @@
       <div class="nav-item">
         <span class="v-link selected dark" onclick="javascript:window.location='/order'"> 挂号订单 </span>
       </div>
+
       <div class="nav-item ">
         <span class="v-link clickable dark" onclick="javascript:window.location='/patient'"> 就诊人管理 </span>
       </div>
+
+      <div class="nav-item ">
+        <span class="v-link clickable dark" onclick="javascript:window.location='/bingli'"> 病例记录 </span>
+      </div>
+
       <div class="nav-item ">
         <span class="v-link clickable dark"> 修改账号信息 </span>
       </div>
+
       <div class="nav-item ">
         <span class="v-link clickable dark"> 意见反馈 </span>
       </div>
     </div>
     <!-- 左侧导航 #end -->
+    
     <!-- 右侧内容 #start -->
     <div class="page-container">
       <div>

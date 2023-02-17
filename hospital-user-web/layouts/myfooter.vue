@@ -2,8 +2,8 @@
   <div class="footer-container">
     <div class="wrapper">
       <div>
-        <span class="record">京ICP备13018369号</span
-        ><span class="phone">电话挂号010-56253825</span>
+        <span class="record">厦门理工学院</span
+        ><span class="phone">电话挂号010-00000000</span>
       </div>
       <div class="right">
         <span class="v-link clickable"> 联系我们 </span
